@@ -21,13 +21,16 @@ namespace ProjektWPiAA
 
         public static void ClientMethod(IAbstractFactory factory)
         {
-            var productA = factory.CreateProductA();
+            var productMinA = factory.CreateMinimalProductA();
+            var productFullA = factory.CreateFullProductA();
             var productB = factory.CreateProductB();
-            var productC = factory.CreateProductC();    
+            var productC = factory.CreateProductC();
 
-            Console.WriteLine(productA.UsefulFunctionA());
+            Console.WriteLine("Min Product: " + productMinA.ListParts() + "\n" + productMinA.UsefulFunctionA());
+            Console.WriteLine("Full Product: " + productFullA.ListParts() + "\n" + productFullA.UsefulFunctionA());
+            //Console.WriteLine(productA.UsefulFunctionA());
             Console.WriteLine(productC.UsefulFunctionC());
-            Console.WriteLine(productB.AnotherUsefulFunctionB(productA));
+            Console.WriteLine(productB.AnotherUsefulFunctionB(productC));
         }
 
     }

@@ -8,7 +8,9 @@ namespace ProjektWPiAA.IFactory
 {
     public interface IAbstractFactory
     {
-        IAbstractProductA CreateProductA();
+        //IAbstractProductA CreateProductA();
+        IAbstractProductA CreateMinimalProductA();
+        IAbstractProductA CreateFullProductA();
 
         IAbstractProductB CreateProductB();
 

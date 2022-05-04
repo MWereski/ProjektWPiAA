@@ -15,9 +15,9 @@ namespace ProjektWPiAA.FactoryA
             return "The result of the product B1.";
         }
 
-        public string AnotherUsefulFunctionB(IAbstractProductA collaborator)
+        public string AnotherUsefulFunctionB(IAbstractProductC collaborator)
         {
-            var result = collaborator.UsefulFunctionA();
+            var result = collaborator.UsefulFunctionC();
 
             return $"The result of the B1 collaborating with the ({result})";
         }

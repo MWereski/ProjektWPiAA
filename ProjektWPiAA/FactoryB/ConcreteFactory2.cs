@@ -11,8 +11,10 @@ namespace ProjektWPiAA.FactoryB
 {
     class ConcreteFactory2 : IAbstractFactory
     {
-        public IAbstractProductA CreateProductA()
+        public IAbstractProductA CreateMinimalProductA()
         {
+            //return new ConcreteProductA1();
+
             var director = new DirectorProductA2();
             var builder = new BuilderProductA2();
 
@@ -20,6 +22,23 @@ namespace ProjektWPiAA.FactoryB
 
             Console.WriteLine("Standard basic product A2:");
             director.BuildMinimalViableProduct();
+
+            var readyProduct = builder.GetProduct();
+
+            Console.WriteLine(readyProduct.ListParts());
+
+            return readyProduct;
+
+        }
+        public IAbstractProductA CreateFullProductA()
+        {
+            var director = new DirectorProductA2();
+            var builder = new BuilderProductA2();
+
+            director.Builder = builder;
+
+            Console.WriteLine("Full product A2:");
+            director.BuildFullFeaturedProduct();
 
             var readyProduct = builder.GetProduct();
 

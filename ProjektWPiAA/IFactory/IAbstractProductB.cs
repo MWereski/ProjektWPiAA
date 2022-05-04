@@ -10,6 +10,6 @@ namespace ProjektWPiAA.IFactory
     {
         string UsefulFunctionB();
 
-        string AnotherUsefulFunctionB(IAbstractProductA collaborator);
+        string AnotherUsefulFunctionB(IAbstractProductC collaborator);
     }
 }

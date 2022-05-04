@@ -10,8 +10,9 @@ using ProjektWPiAA.ProductDirectors;
 namespace ProjektWPiAA.FactoryA
 {
     class ConcreteFactory1 : IAbstractFactory
-    {
-        public IAbstractProductA CreateProductA()
+    { 
+
+        public IAbstractProductA CreateMinimalProductA()
         {
             //return new ConcreteProductA1();
 
@@ -30,7 +31,22 @@ namespace ProjektWPiAA.FactoryA
             return readyProduct;
 
         }
+        public IAbstractProductA CreateFullProductA()
+        {
+            var director = new DirectorProductA1();
+            var builder = new BuilderProductA1();
 
+            director.Builder = builder;
+
+            Console.WriteLine("Full product A1:");
+            director.BuildFullFeaturedProduct();
+
+            var readyProduct = builder.GetProduct();
+
+            Console.WriteLine(readyProduct.ListParts());
+
+            return readyProduct;
+        }
         public IAbstractProductB CreateProductB()
         {
             return new ConcreteProductB1();
