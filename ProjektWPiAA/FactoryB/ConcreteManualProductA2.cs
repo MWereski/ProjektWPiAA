@@ -3,21 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjektWPiAA.IFactory;
 
 namespace ProjektWPiAA.FactoryB
 {
-    public class ConcreteProductA2 : IAbstractProductA
+    public class ConcreteManualProductA2
     {
         private List<object> _parts = new List<object>();
 
-        private ConcreteManualProductA2 _manual;
-
-        public ConcreteManualProductA2 Manual
-        {
-            get { return _manual; }
-            set { _manual = value; }
-        }
         public void Add(string part)
         {
             _parts.Add(part);
@@ -35,9 +27,16 @@ namespace ProjektWPiAA.FactoryB
             return "Product A2 parts: " + str + "\n";
         }
 
-        public string UsefulFunctionA()
+        public string WriteManual()
         {
-            return "The Result Of the product A2";
+            string str = "MANUAL PRODUCT A2: \n";
+
+            for (int i = 0; i < _parts.Count; i++)
+            {
+                str += "MANUAL OF PART: " + _parts[i].ToString() + "\n";
+            }
+
+            return str + "END OF MANUAL OF PRODUCT A2" + "\n";
         }
     }
 }

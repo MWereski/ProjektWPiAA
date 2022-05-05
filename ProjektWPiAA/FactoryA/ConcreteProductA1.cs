@@ -10,6 +10,15 @@ namespace ProjektWPiAA.FactoryA
     public class ConcreteProductA1 : IAbstractProductA
     {
         private List<object> _parts = new List<object>();
+
+        private ConcreteManualProductA1 _manual;
+
+        public ConcreteManualProductA1 Manual
+        {
+            get { return _manual; }
+            set { _manual = value; }
+        }
+
         public void Add(string part)
         {
             _parts.Add(part);

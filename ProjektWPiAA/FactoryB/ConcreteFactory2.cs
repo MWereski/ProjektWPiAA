@@ -27,6 +27,19 @@ namespace ProjektWPiAA.FactoryB
 
             Console.WriteLine(readyProduct.ListParts());
 
+            var manualBuider = new BuilderManualProductA2();
+
+            director.Builder = manualBuider;
+            Console.WriteLine("Create MANUAL");
+
+            director.BuildMinimalViableProduct();
+
+            var readyManual = manualBuider.GetProduct();
+
+            readyProduct.Manual = readyManual;
+
+            Console.WriteLine(readyProduct.Manual.WriteManual());
+
             return readyProduct;
 
         }
@@ -43,6 +56,19 @@ namespace ProjektWPiAA.FactoryB
             var readyProduct = builder.GetProduct();
 
             Console.WriteLine(readyProduct.ListParts());
+
+            var manualBuider = new BuilderManualProductA2();
+
+            director.Builder = manualBuider;
+            Console.WriteLine("Create MANUAL");
+
+            director.BuildFullFeaturedProduct();
+
+            var readyManual = manualBuider.GetProduct();
+
+            readyProduct.Manual = readyManual;
+
+            Console.WriteLine(readyProduct.Manual.WriteManual());
 
             return readyProduct;
         }
