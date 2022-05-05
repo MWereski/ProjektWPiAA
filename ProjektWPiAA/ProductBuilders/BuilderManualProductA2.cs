@@ -41,5 +41,10 @@ namespace ProjektWPiAA.ProductBuilders
 
             return result;
         }
+
+        public void SetName(string name)
+        {
+
+        }
     }
 }

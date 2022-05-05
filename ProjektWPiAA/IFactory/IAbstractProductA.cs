@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjektWPiAA.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,10 @@ namespace ProjektWPiAA.IFactory
     {
         string UsefulFunctionA();
 
-        void Add(string part);
+        void Add(string part, int cost);
 
         string ListParts();
 
-
+        public RecipeProductModel GetModelObject();
     }
 }

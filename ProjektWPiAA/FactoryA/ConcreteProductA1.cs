@@ -4,12 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektWPiAA.IFactory;
+using ProjektWPiAA.Models;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ProjektWPiAA.FactoryA
 {
     public class ConcreteProductA1 : IAbstractProductA
     {
         private List<object> _parts = new List<object>();
+
+        private int _sum;
+
+        private string _name = "";
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
 
         private ConcreteManualProductA1 _manual;
 
@@ -19,9 +32,11 @@ namespace ProjektWPiAA.FactoryA
             set { _manual = value; }
         }
 
-        public void Add(string part)
+
+        public void Add(string part, int costOfPart)
         {
             _parts.Add(part);
+            this._sum += costOfPart;
         }
 
         public string ListParts()
@@ -40,5 +55,16 @@ namespace ProjektWPiAA.FactoryA
         {
             return "The Result Of the product A1";
         }
+
+        public RecipeProductModel GetModelObject()
+        {
+            var obj = new RecipeProductModel();
+
+            obj.Name = _name;
+            obj.Cost = _sum;
+            obj.Manual = _manual.WriteManual();
+
+            return obj;
+        } 
     }
 }

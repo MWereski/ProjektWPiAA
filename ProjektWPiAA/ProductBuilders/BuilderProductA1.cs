@@ -22,15 +22,18 @@ namespace ProjektWPiAA.ProductBuilders
         {
             _product = new ConcreteProductA1();
         }
-
+        public void SetName(string Name)
+        {
+            _product.Name = Name;
+        }
         public void BuildPartA()
         {
-            this._product.Add("PART_A");
+            this._product.Add("PART_A", 100);
         }
 
         public void BuildPartB()
         {
-            this._product.Add("PART_B");
+            this._product.Add("PART_B", 200);
         }
 
         public ConcreteProductA1 GetProduct()

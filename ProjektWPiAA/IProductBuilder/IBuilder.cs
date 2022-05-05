@@ -12,5 +12,7 @@ namespace ProjektWPiAA.IProductBuilder
 
         void BuildPartB();
 
+        void SetName(string name);
+
     }
 }

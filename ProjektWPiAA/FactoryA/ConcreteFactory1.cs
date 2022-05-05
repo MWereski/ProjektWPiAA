@@ -12,17 +12,17 @@ namespace ProjektWPiAA.FactoryA
     class ConcreteFactory1 : IAbstractFactory
     { 
 
-        public IAbstractProductA CreateMinimalProductA()
+        public IAbstractProductA CreateMinimalProductA(string name)
         {
             //return new ConcreteProductA1();
 
-            var director = new DirectorProductA1();
+            var director = new DirectorProductA();
             var builder = new BuilderProductA1();
 
             director.Builder = builder;
 
             Console.WriteLine("Standard basic product A1:");
-            director.BuildMinimalViableProduct();
+            director.BuildMinimalViableProduct(name + " A1");
 
             var readyProduct = builder.GetProduct();
 
@@ -33,7 +33,7 @@ namespace ProjektWPiAA.FactoryA
             director.Builder = manualBuider;
             Console.WriteLine("Create MANUAL");
 
-            director.BuildMinimalViableProduct();
+            director.BuildMinimalViableProduct(name + " A1");
 
             var readyManual = manualBuider.GetProduct();
 
@@ -44,15 +44,15 @@ namespace ProjektWPiAA.FactoryA
             return readyProduct;
 
         }
-        public IAbstractProductA CreateFullProductA()
+        public IAbstractProductA CreateFullProductA(string name)
         {
-            var director = new DirectorProductA1();
+            var director = new DirectorProductA();
             var builder = new BuilderProductA1();
 
             director.Builder = builder;
 
             Console.WriteLine("Full product A1:");
-            director.BuildFullFeaturedProduct();
+            director.BuildFullFeaturedProduct(name + " A1");
 
             var readyProduct = builder.GetProduct();
 
@@ -63,7 +63,7 @@ namespace ProjektWPiAA.FactoryA
             director.Builder = manualBuider;
             Console.WriteLine("Create MANUAL");
 
-            director.BuildFullFeaturedProduct();
+            director.BuildFullFeaturedProduct(name + " A1");
 
             var readyManual = manualBuider.GetProduct();
 
