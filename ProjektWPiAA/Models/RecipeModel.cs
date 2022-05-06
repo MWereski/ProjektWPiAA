@@ -12,6 +12,5 @@ namespace ProjektWPiAA.Models
         public string Name { get; set; }
         public int Sum { get; set; }
         public List<RecipeProductModel> RecipeProducts { get; set; }
-
     }
 }

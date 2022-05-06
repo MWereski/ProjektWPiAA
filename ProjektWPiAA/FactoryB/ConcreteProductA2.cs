@@ -12,7 +12,7 @@ namespace ProjektWPiAA.FactoryB
     {
         private List<object> _parts = new List<object>();
 
-        private int _sum;
+        public int _sum;
 
         private string _name = "";
 
@@ -55,6 +55,7 @@ namespace ProjektWPiAA.FactoryB
         {
             var obj = new RecipeProductModel();
 
+            obj.Id = DateTime.Now.Ticks;
             obj.Name = _name;
             obj.Cost = _sum;
             obj.Manual = _manual.WriteManual();

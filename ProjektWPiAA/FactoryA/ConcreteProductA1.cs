@@ -14,7 +14,7 @@ namespace ProjektWPiAA.FactoryA
     {
         private List<object> _parts = new List<object>();
 
-        private int _sum;
+        public int _sum;
 
         private string _name = "";
 
@@ -51,20 +51,24 @@ namespace ProjektWPiAA.FactoryA
             return "Product A1 parts: " + str + "\n";
         }
 
+
+
         public string UsefulFunctionA()
         {
             return "The Result Of the product A1";
         }
 
+
         public RecipeProductModel GetModelObject()
         {
             var obj = new RecipeProductModel();
 
+            obj.Id = DateTime.Now.Ticks;
             obj.Name = _name;
             obj.Cost = _sum;
             obj.Manual = _manual.WriteManual();
 
             return obj;
-        } 
+        }
     }
 }
