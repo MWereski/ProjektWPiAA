@@ -23,17 +23,17 @@ namespace ProjektWPiAA.ProductBuilders
             _manual = new ConcreteManualProductA1();
         }
 
-        public void BuildPartA()
+        public override void BuildPartA()
         {
             this._manual.Add("PART_A");
         }
 
-        public void BuildPartB()
+        public override void BuildPartB()
         {
             this._manual.Add("PART_B");
         }
 
-        public ConcreteManualProductA1 GetProduct()
+        public IManual GetProduct()
         {
             ConcreteManualProductA1 result = this._manual;
 
@@ -42,7 +42,7 @@ namespace ProjektWPiAA.ProductBuilders
             return result;
         }
 
-        public void SetName(string name)
+        public override void SetName(string name)
         {
             
         }

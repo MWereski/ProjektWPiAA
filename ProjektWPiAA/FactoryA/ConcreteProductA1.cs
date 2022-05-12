@@ -7,6 +7,7 @@ using ProjektWPiAA.IFactory;
 using ProjektWPiAA.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using ProjektWPiAA.IProductBuilder;
 
 namespace ProjektWPiAA.FactoryA
 {
@@ -17,16 +18,15 @@ namespace ProjektWPiAA.FactoryA
         public int _sum;
 
         private string _name = "";
-
         public string Name
         {
             get { return _name; }
             set { _name = value; }
         }
 
-        private ConcreteManualProductA1 _manual;
+        private IManual _manual;
 
-        public ConcreteManualProductA1 Manual
+        public IManual Manual
         {
             get { return _manual; }
             set { _manual = value; }

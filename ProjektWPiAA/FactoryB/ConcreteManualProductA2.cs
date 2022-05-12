@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjektWPiAA.IProductBuilder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace ProjektWPiAA.FactoryB
 {
-    public class ConcreteManualProductA2
+    public class ConcreteManualProductA2 : IManual
     {
         private List<object> _parts = new List<object>();
+        public List<object> Parts
+        {
+            get { return _parts; }
+            set { _parts = value; }
+        }
 
         public void Add(string part)
         {

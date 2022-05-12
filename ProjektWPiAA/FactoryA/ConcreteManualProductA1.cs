@@ -4,14 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektWPiAA.IFactory;
+using ProjektWPiAA.IProductBuilder;
 using ProjektWPiAA.ProductBuilders;
 using ProjektWPiAA.ProductDirectors;
 
 namespace ProjektWPiAA.FactoryA
 {
-    public class ConcreteManualProductA1
+    public class ConcreteManualProductA1 : IManual
     {
         private List<object> _parts = new List<object>();
+        public List<object> Parts
+        {
+            get { return _parts; }
+            set { _parts = value; }
+        }
         public void Add(string part)
         {
             _parts.Add(part);

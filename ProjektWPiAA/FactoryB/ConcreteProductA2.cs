@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektWPiAA.IFactory;
+using ProjektWPiAA.IProductBuilder;
 using ProjektWPiAA.Models;
 
 namespace ProjektWPiAA.FactoryB
@@ -14,11 +15,11 @@ namespace ProjektWPiAA.FactoryB
 
         public int _sum;
 
-        private string _name = "";
+        private string _name;
 
-        private ConcreteManualProductA2 _manual;
+        private IManual _manual;
 
-        public ConcreteManualProductA2 Manual
+        public IManual Manual
         {
             get { return _manual; }
             set { _manual = value; }

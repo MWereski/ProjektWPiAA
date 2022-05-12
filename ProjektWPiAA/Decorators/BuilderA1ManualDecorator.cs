@@ -3,48 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjektWPiAA.IProductBuilder;
 using ProjektWPiAA.FactoryA;
 using ProjektWPiAA.IFactory;
+using ProjektWPiAA.IProductBuilder;
 
-namespace ProjektWPiAA.ProductBuilders
+namespace ProjektWPiAA.Decorators
 {
-    public class BuilderProductA1 : IBuilder
+    public class BuilderA1ManualDecorator : BuilderDecorator
     {
-        private ConcreteProductA1 _product = new ConcreteProductA1();
-
-
-        public BuilderProductA1()
+        public BuilderA1ManualDecorator(IBuilder builder) : base(builder)
         {
             this.Reset();
         }
 
+        private ConcreteManualProductA1 _manual = new ConcreteManualProductA1();
+
         public void Reset()
         {
-            _product = new ConcreteProductA1();
+            _manual = new ConcreteManualProductA1();
         }
         public override void SetName(string Name)
         {
-            _product.Name = Name;
+       
         }
         public override void BuildPartA()
         {
-            this._product.Add("PART_A", 100);
+            this._manual.Add("PART_A_insurance");
         }
 
         public override void BuildPartB()
         {
-            this._product.Add("PART_B", 200);
+            this._manual.Add("PART_B_insurance");
         }
 
-        public ConcreteProductA1 GetProduct()
+        public ConcreteManualProductA1 GetProduct()
         {
-            ConcreteProductA1 result = this._product;
+            ConcreteManualProductA1 result = this._manual;
 
             this.Reset();
 
             return result;
         }
-
     }
 }

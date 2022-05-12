@@ -1,23 +1,22 @@
-﻿using System;
+﻿using ProjektWPiAA.FactoryA;
+using ProjektWPiAA.IFactory;
+using ProjektWPiAA.IProductBuilder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjektWPiAA.IProductBuilder;
-using ProjektWPiAA.FactoryA;
-using ProjektWPiAA.IFactory;
 
-namespace ProjektWPiAA.ProductBuilders
+namespace ProjektWPiAA.Decorators
 {
-    public class BuilderProductA1 : IBuilder
+    public class BuilderA1Decorator : BuilderDecorator
     {
-        private ConcreteProductA1 _product = new ConcreteProductA1();
-
-
-        public BuilderProductA1()
+        public BuilderA1Decorator(IBuilder builder) : base(builder)
         {
             this.Reset();
         }
+
+        private ConcreteProductA1 _product = new ConcreteProductA1();
 
         public void Reset()
         {
@@ -29,12 +28,12 @@ namespace ProjektWPiAA.ProductBuilders
         }
         public override void BuildPartA()
         {
-            this._product.Add("PART_A", 100);
+            this._product.Add("PART_A_insurance", 199);
         }
 
         public override void BuildPartB()
         {
-            this._product.Add("PART_B", 200);
+            this._product.Add("PART_B_insurance", 299);
         }
 
         public ConcreteProductA1 GetProduct()

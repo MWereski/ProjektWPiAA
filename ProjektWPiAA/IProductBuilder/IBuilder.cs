@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProjektWPiAA.IProductBuilder
 {
-    public interface IBuilder
+    public abstract class IBuilder
     {
-        void BuildPartA();
+        public abstract void BuildPartA();
 
-        void BuildPartB();
+        public abstract void BuildPartB();
 
-        void SetName(string name);
+        public abstract void SetName(string name);
 
     }
 }
+ 
