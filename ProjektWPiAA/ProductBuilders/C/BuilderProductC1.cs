@@ -1,27 +1,23 @@
-﻿using System;
+﻿using ProjektWPiAA.FactoryA;
+using ProjektWPiAA.IProductBuilder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjektWPiAA.IProductBuilder;
-using ProjektWPiAA.FactoryA;
-using ProjektWPiAA.IFactory;
 
-namespace ProjektWPiAA.ProductBuilders
+namespace ProjektWPiAA.ProductBuilders.C
 {
-    public class BuilderProductA1 : IBuilder
+    public class BuilderProductC1 : IBuilderC
     {
-        private ConcreteProductA1 _product = new ConcreteProductA1();
-
-
-        public BuilderProductA1()
+        public BuilderProductC1()
         {
             this.Reset();
         }
 
         public void Reset()
         {
-            _product = new ConcreteProductA1();
+            _product = new ConcreteProductC1();
         }
         public override void SetName(string Name)
         {
@@ -37,14 +33,13 @@ namespace ProjektWPiAA.ProductBuilders
             this._product.Add("PART_B", 200);
         }
 
-        public ConcreteProductA1 GetProduct()
+        public ConcreteProductC1 GetProduct()
         {
-            ConcreteProductA1 result = this._product;
+            ConcreteProductC1 result = (ConcreteProductC1)this._product;
 
             this.Reset();
 
             return result;
         }
-
     }
 }

@@ -1,6 +1,6 @@
 ﻿using ProjektWPiAA.Decorators;
 using ProjektWPiAA.Decorators.A;
-using ProjektWPiAA.FactoryA;
+using ProjektWPiAA.FactoryB;
 using ProjektWPiAA.IFactory;
 using ProjektWPiAA.IProductBuilder;
 using ProjektWPiAA.ProductBuilders;
@@ -15,14 +15,14 @@ using System.Threading.Tasks;
 
 namespace ProjektWPiAA.Facade
 {
-    public class FacadeA1
+    public class FacadeA2
     {
         protected DirectorProductA _directorA;
 
-        protected BuilderProductA1 _builderA;
-        protected BuilderManualProductA1 _builderManualA;
+        protected BuilderProductA2 _builderA;
+        protected BuilderManualProductA2 _builderManualA;
 
-        public FacadeA1(DirectorProductA directorA, BuilderProductA1 builderA, BuilderManualProductA1 builderManualA)
+        public FacadeA2(DirectorProductA directorA, BuilderProductA2 builderA, BuilderManualProductA2 builderManualA)
         {
             this._directorA = directorA;
             this._builderA = builderA;
@@ -50,8 +50,8 @@ namespace ProjektWPiAA.Facade
          
         public IAbstractProductA FullOperation(string name)
         {
-            var decorator = new BuilderA1Decorator(_builderA);
-            var manualDecorator = new BuilderA1ManualDecorator(_builderManualA);
+            var decorator = new BuilderA2Decorator(_builderA);
+            var manualDecorator = new BuilderA2ManualDecorator(_builderManualA);
 
             _directorA.Builder = decorator;
 

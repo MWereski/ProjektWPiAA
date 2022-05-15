@@ -4,24 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektWPiAA.IFactory;
+using ProjektWPiAA.IProductBuilder;
+using ProjektWPiAA.Models;
 
 namespace ProjektWPiAA.FactoryB
 {
-    class ConcreteProductB2 : IAbstractProductB
+    public class ConcreteProductB2 : IAbstractProductB
     {
-        public string UsefulFunctionB()
+
+        private List<object> _parts = new List<object>();
+
+        public int _sum;
+
+        private string _name = "";
+        public string Name
         {
-            return "The result of the product B2.";
+            get { return _name; }
+            set { _name = value; }
         }
 
-        // The variant, Product B2, is only able to work correctly with the
-        // variant, Product A2. Nevertheless, it accepts any instance of
-        // AbstractProductA as an argument.
-        public string AnotherUsefulFunctionB(IAbstractProductC collaborator)
-        {
-            var result = collaborator.UsefulFunctionC();
+        private IManual _manual;
 
-            return $"The result of the B2 collaborating with the ({result})";
+        public IManual Manual
+        {
+            get { return _manual; }
+            set { _manual = value; }
         }
+
+
+        public void Add(string part, int costOfPart)
+        {
+            _parts.Add(part);
+            this._sum += costOfPart;
+        }
+
+        public string ListParts()
+        {
+            string str = string.Empty;
+
+            for (int i = 0; i < _parts.Count; i++)
+            {
+                str += _parts[i].ToString() + ", ";
+            }
+
+            return "Product B2 parts: " + str + "\n";
+        }
+
+        public RecipeProductModel GetModelObject()
+        {
+            var obj = new RecipeProductModel();
+
+            obj.Id = DateTime.Now.Ticks;
+            obj.Name = _name;
+            obj.Cost = _sum;
+            obj.Manual = _manual.WriteManual();
+
+            return obj;
+        }
+
     }
 }

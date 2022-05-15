@@ -21,7 +21,6 @@ namespace ProjektWPiAA.IFactory
             get;
             set;
         }
-        string UsefulFunctionA();
 
         void Add(string part, int cost);
 

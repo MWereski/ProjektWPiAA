@@ -7,6 +7,9 @@ using ProjektWPiAA.Decorators;
 using ProjektWPiAA.Facade;
 using ProjektWPiAA.IFactory;
 using ProjektWPiAA.ProductBuilders;
+using ProjektWPiAA.ProductBuilders.A;
+using ProjektWPiAA.ProductBuilders.B;
+using ProjektWPiAA.ProductBuilders.C;
 using ProjektWPiAA.ProductDirectors;
 
 namespace ProjektWPiAA.FactoryA
@@ -16,34 +19,6 @@ namespace ProjektWPiAA.FactoryA
 
         public IAbstractProductA CreateMinimalProductA(string name)
         {
-            //return new ConcreteProductA1();
-
-            //var director = new DirectorProductA();
-            //var builder = new BuilderProductA1();
-
-            //director.Builder = builder;
-
-            //Console.WriteLine("Standard basic product A1:");
-            //director.BuildMinimalViableProduct(name + " A1");
-
-            //var readyProduct = builder.GetProduct();
-
-            //Console.WriteLine(readyProduct.ListParts());
-
-            //var manualBuider = new BuilderManualProductA1();
-
-            //director.Builder = manualBuider;
-            //Console.WriteLine("Create MANUAL");
-
-            //director.BuildMinimalViableProduct(name + " A1");
-
-            //var readyManual = manualBuider.GetProduct();
-
-            //readyProduct.Manual = readyManual;
-
-            //Console.WriteLine(readyProduct.Manual.WriteManual());
-
-            //return readyProduct;
 
             var facadeA1 = new FacadeA1(new DirectorProductA(), new BuilderProductA1(), new BuilderManualProductA1());
 
@@ -52,47 +27,40 @@ namespace ProjektWPiAA.FactoryA
         }
         public IAbstractProductA CreateFullProductA(string name)
         {
-            //var director = new DirectorProductA();
-            //var builder = new BuilderProductA1();
-
-            //var builderDecorated = new BuilderA1Decorator(builder);
-
-            //director.Builder = builderDecorated;
-
-            //Console.WriteLine("Full product A1:");
-            //director.BuildFullFeaturedProduct(name + " A1");
-
-            //var readyProduct = builderDecorated.GetProduct();
-
-            //Console.WriteLine(readyProduct.ListParts());
-
-            //var manualBuider = new BuilderManualProductA1();
-
-            //director.Builder = manualBuider;
-            //Console.WriteLine("Create MANUAL");
-
-            //director.BuildFullFeaturedProduct(name + " A1");
-
-            //var readyManual = manualBuider.GetProduct();
-
-            //readyProduct.Manual = readyManual;
-
-            //Console.WriteLine(readyProduct.Manual.WriteManual());
-
-            //return readyProduct;
-
+            
             var facadeA1 = new FacadeA1(new DirectorProductA(), new BuilderProductA1(),  new BuilderManualProductA1());
 
             return facadeA1.FullOperation(name + " A1");
         }
-        public IAbstractProductB CreateProductB()
+        public IAbstractProductB CreateMinimalProductB(string name)
         {
-            return new ConcreteProductB1();
-        }
 
-        public IAbstractProductC CreateProductC()
+            var facadeB1 = new FacadeB1(new DirectorProductB(), new BuilderProductB1(), new BuilderManualProductB1());
+
+            return facadeB1.MinimalOperation(name + " B1");
+
+        }
+        public IAbstractProductB CreateFullProductB(string name)
         {
-            return new ConcreteProductC1();
+
+            var facadeB1 = new FacadeB1(new DirectorProductB(), new BuilderProductB1(), new BuilderManualProductB1());
+
+            return facadeB1.FullOperation(name + " B1");
+        }
+        public IAbstractProductC CreateMinimalProductC(string name)
+        {
+
+            var facadeC1 = new FacadeC1(new DirectorProductC(), new BuilderProductC1(), new BuilderManualProductC1());
+
+            return facadeC1.MinimalOperation(name + " C1");
+
+        }
+        public IAbstractProductC CreateFullProductC(string name)
+        {
+
+            var facadeC1 = new FacadeC1(new DirectorProductC(), new BuilderProductC1(), new BuilderManualProductC1());
+
+            return facadeC1.FullOperation(name + " C1");
         }
     }
 }

@@ -46,12 +46,6 @@ namespace ProjektWPiAA.FactoryB
 
             return "Product A2 parts: " + str + "\n";
         }
-
-        public string UsefulFunctionA()
-        {
-            return "The Result Of the product A2";
-        }
-
         public RecipeProductModel GetModelObject()
         {
             var obj = new RecipeProductModel();

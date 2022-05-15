@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjektWPiAA.ProductBuilders
+namespace ProjektWPiAA.ProductBuilders.A
 {
-    public class BuilderManualProductA2 : IBuilder
+    public class BuilderManualProductA2 : IBuilderA
     {
         private ConcreteManualProductA2 _manual = new ConcreteManualProductA2();
 

@@ -346,9 +346,21 @@ namespace ProjektWPiAA
             Console.SetCursorPosition((Console.WindowWidth - ("2 - Full A_" + factory.GetType()).Length) / 2, Console.CursorTop);
             Console.WriteLine(("2 - Full A_" + factory.GetType()).Pastel("#428df5"));
 
+            Console.SetCursorPosition((Console.WindowWidth - ("3 - Min B_" + factory.GetType()).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("3 - Min B_" + factory.GetType()).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - "3 - Back".Length) / 2, Console.CursorTop);
-            Console.WriteLine("3 - Back".Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("4 - Full B_" + factory.GetType()).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("4 - Full B_" + factory.GetType()).Pastel("#428df5"));
+
+            Console.SetCursorPosition((Console.WindowWidth - ("5 - Min C_" + factory.GetType()).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("5 - Min C_" + factory.GetType()).Pastel("#428df5"));
+
+            Console.SetCursorPosition((Console.WindowWidth - ("6 - Full C_" + factory.GetType()).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("6 - Full C_" + factory.GetType()).Pastel("#428df5"));
+
+
+            Console.SetCursorPosition((Console.WindowWidth - "7 - Back".Length) / 2, Console.CursorTop);
+            Console.WriteLine("7 - Back".Pastel("#428df5"));
 
             Console.SetCursorPosition((Console.WindowWidth - "Operation: ".Length) / 2, Console.CursorTop);
             Console.Write("Operation: ".Pastel("#d1b32c"));
@@ -384,6 +396,38 @@ namespace ProjektWPiAA
                     newRecipe.Sum += productFullAModel.Cost;
                     break;
                 case 3:
+                    var productMinB = factory.CreateMinimalProductB("Minimum product");
+                    var productMinBModel = productMinB.GetModelObject();
+
+                    newRecipe.RecipeProducts.Add(productMinBModel);
+
+                    newRecipe.Sum += productMinBModel.Cost;
+                    break;
+                case 4:
+                    var productFullB = factory.CreateFullProductB("Maximum product");
+                    var productFullBModel = productFullB.GetModelObject();
+
+                    newRecipe.RecipeProducts.Add(productFullBModel);
+
+                    newRecipe.Sum += productFullBModel.Cost;
+                    break;
+                case 5:
+                    var productMinC = factory.CreateMinimalProductC("Minimum product");
+                    var productMinCModel = productMinC.GetModelObject();
+
+                    newRecipe.RecipeProducts.Add(productMinCModel);
+
+                    newRecipe.Sum += productMinCModel.Cost;
+                    break;
+                case 6:
+                    var productFullC = factory.CreateFullProductC("Maximum product");
+                    var productFullCModel = productFullC.GetModelObject();
+
+                    newRecipe.RecipeProducts.Add(productFullCModel);
+
+                    newRecipe.Sum += productFullCModel.Cost;
+                    break;
+                case 7:
 
                     break;
                 default:

@@ -12,8 +12,10 @@ namespace ProjektWPiAA.IFactory
         IAbstractProductA CreateMinimalProductA(string name);
         IAbstractProductA CreateFullProductA(string name);
 
-        IAbstractProductB CreateProductB();
+        IAbstractProductB CreateMinimalProductB(string name);
+        IAbstractProductB CreateFullProductB(string name);
 
-        IAbstractProductC CreateProductC();
+        IAbstractProductC CreateMinimalProductC(string name);
+        IAbstractProductC CreateFullProductC(string name);
     }
 }

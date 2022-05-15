@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjektWPiAA.IProductBuilder;
+using ProjektWPiAA.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,21 @@ namespace ProjektWPiAA.IFactory
 {
     public interface IAbstractProductC
     {
-        string UsefulFunctionC();
+        string Name
+        {
+            get;
+            set;
+        }
+        IManual Manual
+        {
+            get;
+            set;
+        }
+
+        void Add(string part, int cost);
+
+        string ListParts();
+
+        public RecipeProductModel GetModelObject();
     }
 }

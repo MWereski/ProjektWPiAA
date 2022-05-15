@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 using ProjektWPiAA.IProductBuilder;
 
 
-namespace ProjektWPiAA.Decorators
+namespace ProjektWPiAA.Decorators.A
 {
-    public abstract class BuilderDecorator : IBuilder
+    public abstract class BuilderADecorator : IBuilderA
     {
 
-        protected IBuilder _builder;
+        protected IBuilderA _builder;
 
-        public BuilderDecorator(IBuilder builder)
+        public BuilderADecorator(IBuilderA builder)
         {
             this._builder = builder;
+         
         }
-
-        public void SetComponent(IBuilder builder)
+        public void SetComponent(IBuilderA builder)
         {
             this._builder = builder;
         }

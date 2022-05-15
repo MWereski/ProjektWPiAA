@@ -7,11 +7,11 @@ using ProjektWPiAA.IProductBuilder;
 
 namespace ProjektWPiAA.ProductDirectors
 {
-    public class DirectorProductA
+    public class DirectorProductC
     {
-        private IBuilderA _builder;
+        private IBuilderC _builder;
 
-        public IBuilderA Builder
+        public IBuilderC Builder
         {
             set { _builder = value; }
 

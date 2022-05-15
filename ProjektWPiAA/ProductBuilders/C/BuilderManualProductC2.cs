@@ -1,4 +1,4 @@
-﻿using ProjektWPiAA.FactoryA;
+﻿using ProjektWPiAA.FactoryB;
 using ProjektWPiAA.IProductBuilder;
 using System;
 using System.Collections.Generic;
@@ -6,21 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjektWPiAA.ProductBuilders
+namespace ProjektWPiAA.ProductBuilders.C
 {
-    public class BuilderManualProductA1 : IBuilder
+    public class BuilderManualProductC2 : IBuilderC
     {
-        private ConcreteManualProductA1 _manual = new ConcreteManualProductA1();
+        private ConcreteManualProductC2 _manual = new ConcreteManualProductC2();
 
 
-        public BuilderManualProductA1()
+        public BuilderManualProductC2()
         {
             this.Reset();
         }
 
         public void Reset()
         {
-            _manual = new ConcreteManualProductA1();
+            _manual = new ConcreteManualProductC2();
         }
 
         public override void BuildPartA()
@@ -35,7 +35,7 @@ namespace ProjektWPiAA.ProductBuilders
 
         public IManual GetProduct()
         {
-            ConcreteManualProductA1 result = this._manual;
+            ConcreteManualProductC2 result = this._manual;
 
             this.Reset();
 
@@ -44,7 +44,7 @@ namespace ProjektWPiAA.ProductBuilders
 
         public override void SetName(string name)
         {
-            
+
         }
     }
 }

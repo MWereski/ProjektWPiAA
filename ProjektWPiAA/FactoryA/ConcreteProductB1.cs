@@ -4,22 +4,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektWPiAA.IFactory;
+using ProjektWPiAA.IProductBuilder;
+using ProjektWPiAA.Models;
 
 namespace ProjektWPiAA.FactoryA
 {
-    class ConcreteProductB1 : IAbstractProductB
+    public class ConcreteProductB1 : IAbstractProductB
     {
 
-        public string UsefulFunctionB()
+        private List<object> _parts = new List<object>();
+
+        public int _sum;
+
+        private string _name = "";
+        public string Name
         {
-            return "The result of the product B1.";
+            get { return _name; }
+            set { _name = value; }
         }
 
-        public string AnotherUsefulFunctionB(IAbstractProductC collaborator)
-        {
-            var result = collaborator.UsefulFunctionC();
+        private IManual _manual;
 
-            return $"The result of the B1 collaborating with the ({result})";
+        public IManual Manual
+        {
+            get { return _manual; }
+            set { _manual = value; }
+        }
+
+
+        public void Add(string part, int costOfPart)
+        {
+            _parts.Add(part);
+            this._sum += costOfPart;
+        }
+
+        public string ListParts()
+        {
+            string str = string.Empty;
+
+            for (int i = 0; i < _parts.Count; i++)
+            {
+                str += _parts[i].ToString() + ", ";
+            }
+
+            return "Product B1 parts: " + str + "\n";
+        }
+
+        public RecipeProductModel GetModelObject()
+        {
+            var obj = new RecipeProductModel();
+
+            obj.Id = DateTime.Now.Ticks;
+            obj.Name = _name;
+            obj.Cost = _sum;
+            obj.Manual = _manual.WriteManual();
+
+            return obj;
         }
 
     }

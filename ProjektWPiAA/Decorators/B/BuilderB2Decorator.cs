@@ -6,21 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjektWPiAA.ProductBuilders
+namespace ProjektWPiAA.Decorators.B
 {
-    public class BuilderProductA2 : IBuilder
+    class BuilderB2Decorator : BuilderBDecorator
     {
-        private ConcreteProductA2 _product = new ConcreteProductA2();
-
-
-        public BuilderProductA2()
+        public BuilderB2Decorator(IBuilderB builder) : base(builder)
         {
             this.Reset();
         }
 
         public void Reset()
         {
-            _product = new ConcreteProductA2();
+            _product = new ConcreteProductB2();
         }
         public override void SetName(string Name)
         {
@@ -28,17 +25,22 @@ namespace ProjektWPiAA.ProductBuilders
         }
         public override void BuildPartA()
         {
-            this._product.Add("PART_A", 200);
+
+            //base.BuildPartA();
+            base._product.Add("PART_A", 200);
+            base._product.Add("PART_A_insurance", 99);
         }
 
         public override void BuildPartB()
         {
-            this._product.Add("PART_B", 300);
+            //base.BuildPartB();
+            base._product.Add("PART_B", 300);
+            base._product.Add("PART_B_insurance", 199);
         }
 
-        public ConcreteProductA2 GetProduct()
+        public ConcreteProductB2 GetProduct()
         {
-            ConcreteProductA2 result = this._product;
+            ConcreteProductB2 result = (ConcreteProductB2)this._product;
 
             this.Reset();
 
