@@ -260,6 +260,7 @@ namespace ProjektWPiAA
         }
         public static void AddNewProduct()
         {
+            string a = new ConcreteFactory1().Name;
             #region HEAD
             Console.Clear();
             string hello = " ===== PROJEKT WPiAA =====";
@@ -279,11 +280,11 @@ namespace ProjektWPiAA
             Console.WriteLine();
             #endregion
             #region MENU
-            Console.SetCursorPosition((Console.WindowWidth - "1 - Factory 1".Length) / 2, Console.CursorTop);
-            Console.WriteLine("1 - Factory 1".Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("1 - " + new ConcreteFactory1().Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("1 - " + new ConcreteFactory1().Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - "2 - Factory 2".Length) / 2, Console.CursorTop);
-            Console.WriteLine("2 - Factory 2".Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("2 - " + new ConcreteFactory2().Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("2 - " + new ConcreteFactory2().Name).Pastel("#428df5"));
 
             Console.SetCursorPosition((Console.WindowWidth - "3 - Back".Length) / 2, Console.CursorTop);
             Console.WriteLine("3 - Back".Pastel("#428df5"));
@@ -340,23 +341,36 @@ namespace ProjektWPiAA
             #endregion
             #region MENU
 
-            Console.SetCursorPosition((Console.WindowWidth - ("1 - Min A_" + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("1 - Min A_" + factory.GetType()).Pastel("#428df5"));
+            var productMinA = factory.CreateMinimalProductA("Table  " + " " + factory.Name);
+            var productMinAModel = productMinA.GetModelObject();
+            var productFullA = factory.CreateFullProductA("Table  (With guarantee)" + " " + factory.Name);
+            var productFullAModel = productFullA.GetModelObject();
+            var productMinB = factory.CreateMinimalProductB("Chair " + " " + factory.Name);
+            var productMinBModel = productMinB.GetModelObject();
+            var productFullB = factory.CreateFullProductB("Chair  (With guarantee)" + " " + factory.Name);
+            var productFullBModel = productFullB.GetModelObject();
+            var productMinC = factory.CreateMinimalProductC("Carpet  " + " " + factory.Name);
+            var productMinCModel = productMinC.GetModelObject();
+            var productFullC = factory.CreateFullProductC("Carpet  (With guarantee)" + " " + factory.Name);
+            var productFullCModel = productFullC.GetModelObject();
+            
+            Console.SetCursorPosition((Console.WindowWidth - ("1 - " + productMinAModel.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("1 - " + productMinAModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("2 - Full A_" + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("2 - Full A_" + factory.GetType()).Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("2 - " + productFullAModel.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("2 - " + productFullAModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("3 - Min B_" + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("3 - Min B_" + factory.GetType()).Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("3 - " + productMinBModel.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("3 - " + productMinBModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("4 - Full B_" + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("4 - Full B_" + factory.GetType()).Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("4 - " + productFullBModel.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("4 - " + productFullBModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("5 - Min C_" + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("5 - Min C_" + factory.GetType()).Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("5 - " + productMinCModel.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("5 - " + productMinCModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("6 - Full C_" + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("6 - Full C_" + factory.GetType()).Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - ("6 - " + productFullCModel.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("6 - " + productFullCModel.Name).Pastel("#428df5"));
 
 
             Console.SetCursorPosition((Console.WindowWidth - "7 - Back".Length) / 2, Console.CursorTop);
@@ -380,49 +394,35 @@ namespace ProjektWPiAA
             switch (input)
             {
                 case 1:
-                    var productMinA = factory.CreateMinimalProductA("Minimum product");
-                    var productMinAModel = productMinA.GetModelObject();
-
                     newRecipe.RecipeProducts.Add(productMinAModel);
 
                     newRecipe.Sum += productMinAModel.Cost;
                     break;
                 case 2:
-                    var productFullA = factory.CreateFullProductA("Maximum product");
-                    var productFullAModel = productFullA.GetModelObject();
-
                     newRecipe.RecipeProducts.Add(productFullAModel);
 
                     newRecipe.Sum += productFullAModel.Cost;
                     break;
                 case 3:
-                    var productMinB = factory.CreateMinimalProductB("Minimum product");
-                    var productMinBModel = productMinB.GetModelObject();
+
 
                     newRecipe.RecipeProducts.Add(productMinBModel);
 
                     newRecipe.Sum += productMinBModel.Cost;
                     break;
                 case 4:
-                    var productFullB = factory.CreateFullProductB("Maximum product");
-                    var productFullBModel = productFullB.GetModelObject();
-
                     newRecipe.RecipeProducts.Add(productFullBModel);
 
                     newRecipe.Sum += productFullBModel.Cost;
                     break;
                 case 5:
-                    var productMinC = factory.CreateMinimalProductC("Minimum product");
-                    var productMinCModel = productMinC.GetModelObject();
+
 
                     newRecipe.RecipeProducts.Add(productMinCModel);
 
                     newRecipe.Sum += productMinCModel.Cost;
                     break;
                 case 6:
-                    var productFullC = factory.CreateFullProductC("Maximum product");
-                    var productFullCModel = productFullC.GetModelObject();
-
                     newRecipe.RecipeProducts.Add(productFullCModel);
 
                     newRecipe.Sum += productFullCModel.Cost;

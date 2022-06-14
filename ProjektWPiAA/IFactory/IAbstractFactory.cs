@@ -8,6 +8,8 @@ namespace ProjektWPiAA.IFactory
 {
     public interface IAbstractFactory
     {
+        string Name { get; set; }
+
         //IAbstractProductA CreateProductA();
         IAbstractProductA CreateMinimalProductA(string name);
         IAbstractProductA CreateFullProductA(string name);

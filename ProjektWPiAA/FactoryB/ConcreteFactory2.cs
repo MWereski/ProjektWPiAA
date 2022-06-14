@@ -15,12 +15,18 @@ namespace ProjektWPiAA.FactoryB
 {
     class ConcreteFactory2 : IAbstractFactory
     {
+        public string Name { get; set; }
+
+        public ConcreteFactory2()
+        {
+            Name = "Black Red White";
+        }
         public IAbstractProductA CreateMinimalProductA(string name)
         {
 
             var facadeA2 = new FacadeA2(new DirectorProductA(), new BuilderProductA2(), new BuilderManualProductA2());
 
-            return facadeA2.MinimalOperation(name + " A2");
+            return facadeA2.MinimalOperation(name);
 
         }
         public IAbstractProductA CreateFullProductA(string name)
@@ -28,14 +34,14 @@ namespace ProjektWPiAA.FactoryB
 
             var facadeA2 = new FacadeA2(new DirectorProductA(), new BuilderProductA2(), new BuilderManualProductA2());
 
-            return facadeA2.FullOperation(name + " A2");
+            return facadeA2.FullOperation(name);
         }
         public IAbstractProductB CreateMinimalProductB(string name)
         {
 
             var facadeB2 = new FacadeB2(new DirectorProductB(), new BuilderProductB2(), new BuilderManualProductB2());
 
-            return facadeB2.MinimalOperation(name + " B2");
+            return facadeB2.MinimalOperation(name);
 
         }
         public IAbstractProductB CreateFullProductB(string name)
@@ -43,14 +49,14 @@ namespace ProjektWPiAA.FactoryB
 
             var facadeB2 = new FacadeB2(new DirectorProductB(), new BuilderProductB2(), new BuilderManualProductB2());
 
-            return facadeB2.FullOperation(name + " B2");
+            return facadeB2.FullOperation(name);
         }
         public IAbstractProductC CreateMinimalProductC(string name)
         {
 
             var facadeC2 = new FacadeC2(new DirectorProductC(), new BuilderProductC2(), new BuilderManualProductC2());
 
-            return facadeC2.MinimalOperation(name + " C2");
+            return facadeC2.MinimalOperation(name);
 
         }
         public IAbstractProductC CreateFullProductC(string name)
@@ -58,7 +64,7 @@ namespace ProjektWPiAA.FactoryB
 
             var facadeC2 = new FacadeC2(new DirectorProductC(), new BuilderProductC2(), new BuilderManualProductC2());
 
-            return facadeC2.FullOperation(name + " C2");
+            return facadeC2.FullOperation(name);
         }
     }
 }

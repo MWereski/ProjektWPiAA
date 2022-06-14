@@ -32,7 +32,10 @@ namespace ProjektWPiAA.ProductBuilders.B
         {
             this._product.Add("PART_B", 200);
         }
-
+        public override void BuildPartC()
+        {
+            this._product.Add("PART_C", 300);
+        }
         public ConcreteProductB2 GetProduct()
         {
             ConcreteProductB2 result = (ConcreteProductB2)this._product;

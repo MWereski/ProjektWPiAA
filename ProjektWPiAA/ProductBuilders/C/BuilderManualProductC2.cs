@@ -32,7 +32,14 @@ namespace ProjektWPiAA.ProductBuilders.C
         {
             this._manual.Add("PART_B");
         }
-
+        public override void BuildPartC()
+        {
+            this._manual.Add("PART_C");
+        }
+        public override void BuildPartD()
+        {
+            this._manual.Add("PART_D");
+        }
         public IManual GetProduct()
         {
             ConcreteManualProductC2 result = this._manual;

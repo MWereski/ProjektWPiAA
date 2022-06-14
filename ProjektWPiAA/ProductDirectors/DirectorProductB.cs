@@ -20,6 +20,7 @@ namespace ProjektWPiAA.ProductDirectors
         {
             this._builder.SetName(name);
             this._builder.BuildPartA();
+            this._builder.BuildPartB();
         }
 
         public void BuildFullFeaturedProduct(string name)
@@ -27,6 +28,7 @@ namespace ProjektWPiAA.ProductDirectors
             this._builder.SetName(name);
             this._builder.BuildPartA();
             this._builder.BuildPartB();
+            this._builder.BuildPartC();
         }
 
     }

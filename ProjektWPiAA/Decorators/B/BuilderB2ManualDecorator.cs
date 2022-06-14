@@ -27,14 +27,20 @@ namespace ProjektWPiAA.Decorators.B
         }
         public override void BuildPartA()
         {
+            this._manual.Add("PART_A");
             this._manual.Add("PART_A_insurance");
         }
 
         public override void BuildPartB()
         {
+            this._manual.Add("PART_B");
             this._manual.Add("PART_B_insurance");
         }
-
+        public override void BuildPartC()
+        {
+            this._manual.Add("PART_C");
+            this._manual.Add("PART_C_insurance");
+        }
         public ConcreteManualProductB2 GetProduct()
         {
             ConcreteManualProductB2 result = this._manual;

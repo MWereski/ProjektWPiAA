@@ -37,7 +37,12 @@ namespace ProjektWPiAA.Decorators.B
             base._product.Add("PART_B", 300);
             base._product.Add("PART_B_insurance", 199);
         }
-
+        public override void BuildPartC()
+        {
+            //base.BuildPartB();
+            base._product.Add("PART_C", 400);
+            base._product.Add("PART_C_insurance", 299);
+        }
         public ConcreteProductB2 GetProduct()
         {
             ConcreteProductB2 result = (ConcreteProductB2)this._product;

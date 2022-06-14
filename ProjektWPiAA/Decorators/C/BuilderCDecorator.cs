@@ -36,7 +36,20 @@ namespace ProjektWPiAA.Decorators.C
                 this._builder.BuildPartB();
             }
         }
-
+        public override void BuildPartC()
+        {
+            if (this._builder != null)
+            {
+                this._builder.BuildPartC();
+            }
+        }
+        public override void BuildPartD()
+        {
+            if (this._builder != null)
+            {
+                this._builder.BuildPartD();
+            }
+        }
         public override void SetName(string name)
         {
             if (this._builder != null)
