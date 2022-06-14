@@ -341,39 +341,39 @@ namespace ProjektWPiAA
             #endregion
             #region MENU
 
-            var productMinA = factory.CreateMinimalProductA("Table  " + " " + factory.Name);
+            var productMinA = factory.CreateMinimalProductA("Carpet  " + " " + factory.Name);
             var productMinAModel = productMinA.GetModelObject();
-            var productFullA = factory.CreateFullProductA("Table  (With guarantee)" + " " + factory.Name);
+            var productFullA = factory.CreateFullProductA("Carpet  (With guarantee)" + " " + factory.Name);
             var productFullAModel = productFullA.GetModelObject();
-            var productMinB = factory.CreateMinimalProductB("Chair " + " " + factory.Name);
+            var productMinB = factory.CreateMinimalProductB("Table  " + " " + factory.Name);
             var productMinBModel = productMinB.GetModelObject();
-            var productFullB = factory.CreateFullProductB("Chair  (With guarantee)" + " " + factory.Name);
+            var productFullB = factory.CreateFullProductB("Table  (With guarantee)" + " " + factory.Name);
             var productFullBModel = productFullB.GetModelObject();
-            var productMinC = factory.CreateMinimalProductC("Carpet  " + " " + factory.Name);
+            var productMinC = factory.CreateMinimalProductC("Closet  " + " " + factory.Name);
             var productMinCModel = productMinC.GetModelObject();
-            var productFullC = factory.CreateFullProductC("Carpet  (With guarantee)" + " " + factory.Name);
+            var productFullC = factory.CreateFullProductC("Closet  (With guarantee)" + " " + factory.Name);
             var productFullCModel = productFullC.GetModelObject();
             
-            Console.SetCursorPosition((Console.WindowWidth - ("1 - " + productMinAModel.Name).Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - ("1 - " + productMinAModel.Name).Length) / 2, Console.CursorTop);
             Console.WriteLine(("1 - " + productMinAModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("2 - " + productFullAModel.Name).Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - ("2 - " + productFullAModel.Name).Length) / 2, Console.CursorTop);
             Console.WriteLine(("2 - " + productFullAModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("3 - " + productMinBModel.Name).Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - ("3 - " + productMinBModel.Name).Length) / 2, Console.CursorTop);
             Console.WriteLine(("3 - " + productMinBModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("4 - " + productFullBModel.Name).Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - ("4 - " + productFullBModel.Name).Length) / 2, Console.CursorTop);
             Console.WriteLine(("4 - " + productFullBModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("5 - " + productMinCModel.Name).Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - ("5 - " + productMinCModel.Name).Length) / 2, Console.CursorTop);
             Console.WriteLine(("5 - " + productMinCModel.Name).Pastel("#428df5"));
 
-            Console.SetCursorPosition((Console.WindowWidth - ("6 - " + productFullCModel.Name).Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - ("6 - " + productFullCModel.Name).Length) / 2, Console.CursorTop);
             Console.WriteLine(("6 - " + productFullCModel.Name).Pastel("#428df5"));
 
 
-            Console.SetCursorPosition((Console.WindowWidth - "7 - Back".Length) / 2, Console.CursorTop);
+            //Console.SetCursorPosition((Console.WindowWidth - "7 - Back".Length) / 2, Console.CursorTop);
             Console.WriteLine("7 - Back".Pastel("#428df5"));
 
             Console.SetCursorPosition((Console.WindowWidth - "Operation: ".Length) / 2, Console.CursorTop);

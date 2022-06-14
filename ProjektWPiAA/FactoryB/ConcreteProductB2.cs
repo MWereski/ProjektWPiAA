@@ -47,7 +47,7 @@ namespace ProjektWPiAA.FactoryB
                 str += _parts[i].ToString() + ", ";
             }
 
-            return "Product B2 parts: " + str + "\n";
+            return "Product Chair parts: " + str + "\n";
         }
 
         public RecipeProductModel GetModelObject()

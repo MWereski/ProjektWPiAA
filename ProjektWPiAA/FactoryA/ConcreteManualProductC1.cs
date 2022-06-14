@@ -26,19 +26,19 @@ namespace ProjektWPiAA.FactoryA
                 str += _parts[i].ToString() + ", ";
             }
 
-            return "Product C1 parts: " + str + "\n";
+            return "Product Carpet parts: " + str + "\n";
         }
 
         public string WriteManual()
         {
-            string str = "MANUAL PRODUCT C1: \n";
+            string str = "MANUAL PRODUCT Carpet: \n";
 
             for (int i = 0; i < _parts.Count; i++)
             {
                 str += "MANUAL OF PART: " + _parts[i].ToString() + "\n";
             }
 
-            return str + "END OF MANUAL OF PRODUCT C1" + "\n";
+            return str + "END OF MANUAL OF PRODUCT Carpet" + "\n";
         }
     }
 }
