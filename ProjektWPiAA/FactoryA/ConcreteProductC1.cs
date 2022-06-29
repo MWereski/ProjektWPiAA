@@ -36,7 +36,6 @@ namespace ProjektWPiAA.FactoryA
             _parts.Add(part);
             this._sum += costOfPart;
         }
-
         public string ListParts()
         {
             string str = string.Empty;
@@ -46,7 +45,7 @@ namespace ProjektWPiAA.FactoryA
                 str += _parts[i].ToString() + ", ";
             }
 
-            return "Product Carpet parts: " + str + "\n";
+            return "Product Closet parts: " + str + "\n";
         }
 
         public RecipeProductModel GetModelObject()

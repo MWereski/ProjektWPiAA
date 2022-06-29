@@ -341,13 +341,13 @@ namespace ProjektWPiAA
             #endregion
             #region MENU
 
-            var productMinA = factory.CreateMinimalProductA("Carpet  " + " " + factory.Name);
+            var productMinA = factory.CreateMinimalProductA("Table  " + " " + factory.Name);
             var productMinAModel = productMinA.GetModelObject();
-            var productFullA = factory.CreateFullProductA("Carpet  (With guarantee)" + " " + factory.Name);
+            var productFullA = factory.CreateFullProductA("Table  (With guarantee)" + " " + factory.Name);
             var productFullAModel = productFullA.GetModelObject();
-            var productMinB = factory.CreateMinimalProductB("Table  " + " " + factory.Name);
+            var productMinB = factory.CreateMinimalProductB("Chair  " + " " + factory.Name);
             var productMinBModel = productMinB.GetModelObject();
-            var productFullB = factory.CreateFullProductB("Table  (With guarantee)" + " " + factory.Name);
+            var productFullB = factory.CreateFullProductB("Chair  (With guarantee)" + " " + factory.Name);
             var productFullBModel = productFullB.GetModelObject();
             var productMinC = factory.CreateMinimalProductC("Closet  " + " " + factory.Name);
             var productMinCModel = productMinC.GetModelObject();
