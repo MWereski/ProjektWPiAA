@@ -1,2 +1,473 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjektWPiAA.Program">
+    <Position X="30.25" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAAAAAgEAAAAIAACAAgAAAAAAAAAABAAgAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.A.BuilderA1Decorator">
+    <Position X="6.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\A\BuilderA1Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.A.BuilderA1ManualDecorator">
+    <Position X="8.75" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\A\BuilderA1ManualDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.A.BuilderA2Decorator">
+    <Position X="11.25" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\A\BuilderA2Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.A.BuilderA2ManualDecorator">
+    <Position X="13.25" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\A\BuilderA2ManualDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.A.BuilderADecorator">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="ProjektWPiAA.IProductBuilder.IBuilderA" FixedFromPoint="true">
+      <Path>
+        <Point X="9.75" Y="1.688" />
+        <Point X="10.75" Y="1.688" />
+        <Point X="10.75" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAQEAACAA=</HashCode>
+      <FileName>Decorators\A\BuilderADecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.B.BuilderB1Decorator">
+    <Position X="28.75" Y="18.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\B\BuilderB1Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.B.BuilderB1ManualDecorator">
+    <Position X="30.75" Y="18.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\B\BuilderB1ManualDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.B.BuilderB2Decorator">
+    <Position X="24.25" Y="18.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\B\BuilderB2Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.B.BuilderB2ManualDecorator">
+    <Position X="26.25" Y="18.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\B\BuilderB2ManualDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.B.BuilderBDecorator">
+    <Position X="28.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAMACAAAAAAAAAAAAQEAACAA=</HashCode>
+      <FileName>Decorators\B\BuilderBDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.C.BuilderC1Decorator">
+    <Position X="6.25" Y="17.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\C\BuilderC1Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.C.BuilderC1ManualDecorator">
+    <Position X="8.25" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\C\BuilderC1ManualDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.C.BuilderC2Decorator">
+    <Position X="10.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\C\BuilderC2Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.C.BuilderC2ManualDecorator">
+    <Position X="12.5" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>Decorators\C\BuilderC2ManualDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Decorators.C.BuilderCDecorator">
+    <Position X="9.25" Y="13.75" Width="1.5" />
+    <InheritanceLine Type="ProjektWPiAA.IProductBuilder.IBuilderC" FixedFromPoint="true">
+      <Path>
+        <Point X="9.75" Y="11.526" />
+        <Point X="10.25" Y="11.526" />
+        <Point X="10.25" Y="13.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAMASAAAAAAAAAAAAQEAACAA=</HashCode>
+      <FileName>Decorators\C\BuilderCDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Facade.FacadeA1">
+    <Position X="27.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAACAA=</HashCode>
+      <FileName>Facade\FacadeA1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Facade.FacadeA2">
+    <Position X="29.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAACAA=</HashCode>
+      <FileName>Facade\FacadeA2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Facade.FacadeB1">
+    <Position X="23.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAACAA=</HashCode>
+      <FileName>Facade\FacadeB1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Facade.FacadeB2">
+    <Position X="25.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAACAA=</HashCode>
+      <FileName>Facade\FacadeB2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Facade.FacadeC1">
+    <Position X="19.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAACAA=</HashCode>
+      <FileName>Facade\FacadeC1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Facade.FacadeC2">
+    <Position X="21.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAACAA=</HashCode>
+      <FileName>Facade\FacadeC2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteFactory2" BaseTypeListCollapsed="true">
+    <Position X="39" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteFactory2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteManualProductA2" BaseTypeListCollapsed="true">
+    <Position X="41.75" Y="17" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteManualProductA2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteManualProductB2" BaseTypeListCollapsed="true">
+    <Position X="39" Y="17" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteManualProductB2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteManualProductC2" BaseTypeListCollapsed="true">
+    <Position X="36.25" Y="17" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteManualProductC2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteProductA2" BaseTypeListCollapsed="true">
+    <Position X="42" Y="13.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAQAgAAggAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteProductA2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteProductB2" BaseTypeListCollapsed="true">
+    <Position X="39.25" Y="13.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAQAgAAggAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteProductB2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryB.ConcreteProductC2" BaseTypeListCollapsed="true">
+    <Position X="36.5" Y="13.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAQAgAAggAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryB\ConcreteProductC2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.IProductBuilder.IBuilderA">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAIAAQAAAAAA=</HashCode>
+      <FileName>IProductBuilder\IBuilderA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.IProductBuilder.IBuilderB">
+    <Position X="27" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAMACAAAAAAAAAIAAQAAAAAA=</HashCode>
+      <FileName>IProductBuilder\IBuilderB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.IProductBuilder.IBuilderC">
+    <Position X="8.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAMASAAAAAAAAAIAAQAAAAAA=</HashCode>
+      <FileName>IProductBuilder\IBuilderC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Models.DbModel">
+    <Position X="21.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DbModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Models.RecipeModel">
+    <Position X="19.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAQ=</HashCode>
+      <FileName>Models\RecipeModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Models.RecipeProductModel">
+    <Position X="17.5" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RecipeProductModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.A.BuilderManualProductA1">
+    <Position X="0.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\A\BuilderManualProductA1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.A.BuilderManualProductA2">
+    <Position X="2.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\A\BuilderManualProductA2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.A.BuilderProductA1">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\A\BuilderProductA1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.A.BuilderProductA2">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAEACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\A\BuilderProductA2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.B.BuilderManualProductB1">
+    <Position X="19" Y="15" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\B\BuilderManualProductB1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.B.BuilderManualProductB2">
+    <Position X="21.25" Y="15" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\B\BuilderManualProductB2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.B.BuilderProductB1">
+    <Position X="23.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\B\BuilderProductB1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.B.BuilderProductB2">
+    <Position X="25.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMACAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\B\BuilderProductB2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.C.BuilderManualProductC1">
+    <Position X="0.5" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\C\BuilderManualProductC1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.C.BuilderManualProductC2">
+    <Position X="2.75" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\C\BuilderManualProductC2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.C.BuilderProductC1">
+    <Position X="5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\C\BuilderProductC1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductBuilders.C.BuilderProductC2">
+    <Position X="6.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAMASAAAAAAAAAAAASAAAAAA=</HashCode>
+      <FileName>ProductBuilders\C\BuilderProductC2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductDirectors.DirectorProductA">
+    <Position X="19" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAACAA=</HashCode>
+      <FileName>ProductDirectors\DirectorProductA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductDirectors.DirectorProductB">
+    <Position X="24" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAACAA=</HashCode>
+      <FileName>ProductDirectors\DirectorProductB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.ProductDirectors.DirectorProductC">
+    <Position X="21.5" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAACAA=</HashCode>
+      <FileName>ProductDirectors\DirectorProductC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.Singleton.FileManagerSingleton">
+    <Position X="25.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAACAAEAAAABCAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Singleton\FileManagerSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteFactory1" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteFactory1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteManualProductA1" BaseTypeListCollapsed="true">
+    <Position X="37.25" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteManualProductA1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteManualProductB1" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteManualProductB1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteManualProductC1" BaseTypeListCollapsed="true">
+    <Position X="31.75" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteManualProductC1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteProductA1" BaseTypeListCollapsed="true">
+    <Position X="37.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAQAgAAggAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteProductA1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteProductB1" BaseTypeListCollapsed="true">
+    <Position X="34.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAQAgAAggAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteProductB1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjektWPiAA.FactoryA.ConcreteProductC1" BaseTypeListCollapsed="true">
+    <Position X="32" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAQAgAAggAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryA\ConcreteProductC1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ProjektWPiAA.IFactory.IAbstractProductA">
+    <Position X="23" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFactory\IAbstractProductA.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjektWPiAA.IFactory.IAbstractFactory">
+    <Position X="21" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>IFactory\IAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjektWPiAA.IFactory.IAbstractProductB">
+    <Position X="25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFactory\IAbstractProductB.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjektWPiAA.IFactory.IAbstractProductC">
+    <Position X="27" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFactory\IAbstractProductC.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjektWPiAA.IProductBuilder.IManual">
+    <Position X="29.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IProductBuilder\IManual.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

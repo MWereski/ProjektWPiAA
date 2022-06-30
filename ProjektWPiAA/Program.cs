@@ -85,8 +85,8 @@ namespace ProjektWPiAA
 
             #endregion
             #region MENU
-            Console.SetCursorPosition((Console.WindowWidth - "1 - List all in this recipe".Length) / 2, Console.CursorTop);
-                Console.WriteLine("1 - List all in this recipe".Pastel("#428df5"));
+            Console.SetCursorPosition((Console.WindowWidth - "1 - List all recipes".Length) / 2, Console.CursorTop);
+                Console.WriteLine("1 - List all recipes".Pastel("#428df5"));
 
                 Console.SetCursorPosition((Console.WindowWidth - "2 - Add new recipe".Length) / 2, Console.CursorTop);
                 Console.WriteLine("2 - Add new recipe".Pastel("#428df5"));
@@ -329,8 +329,8 @@ namespace ProjektWPiAA
 
             Console.WriteLine();
 
-            Console.SetCursorPosition((Console.WindowWidth - ("Add New Product - " + factory.GetType()).Length) / 2, Console.CursorTop);
-            Console.WriteLine(("Add New Product - " + factory.GetType()).Pastel("#428df5").PastelBg("#101b2b"));
+            Console.SetCursorPosition((Console.WindowWidth - ("Add New Product - " + factory.Name).Length) / 2, Console.CursorTop);
+            Console.WriteLine(("Add New Product - " + factory.Name).Pastel("#428df5").PastelBg("#101b2b"));
 
             Console.WriteLine();
 
